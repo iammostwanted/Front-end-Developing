@@ -1,0 +1,163 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<link rel="shortcut icon" href="images/chef.png">
+
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="fonts/Aladin regular.ttf">
+
+		<script src="jquery/dist/jquery.js"></script>
+		<script src="bootstrap/dist/js/bootstrap.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+
+		<script>
+		$(document).ready(function(){
+		    $("#showLeft").click(function(){
+		        $("#menu1").slideToggle	(1000);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#showRight").click(function(){
+		        $("#menu2").slideToggle	(1000);
+		    });
+		});
+		$('.carousel').carousel()
+
+		function initMap() {
+		    var mapDiv = document.getElementById('map');
+		    var map = new google.maps.Map(mapDiv, {
+		      center: {lat: 43.15, lng: 76.55},
+		      zoom: 12
+		    });
+		  }
+	</script>
+	</head>
+	<body>
+		<div class="fix">
+			<menu>
+				<div class="icon">
+					<a href=""><span class="glyphicon glyphicon-list fonting"></span></a>	
+				</div>
+				<ul>
+					<li><a class="active" href="">Home page</a></li>
+					<li><a href="">About Us</a></li>
+					<li><a href="">Contacts</a></li>
+					<li><a href="">Gallery</a></li>
+					<li><a href="">Partners</a></li>
+				</ul>	
+				
+			</menu>		
+		</div>
+		
+		<div class="container-fluid stat">
+			<div class="row">
+				<div class="col-md-2">
+					<div align="center" class="menuButton">
+						<a id="showLeft" href="#"><img class="butt" src="images/menu.png" alt=""></a>
+					</div>
+					<ul id="menu1" class="line">
+						<li><a href=""><img src="images/salad.png" class="size" alt=""></a></li>
+						<li><a href=""><img src="images/soup.png" class="size" alt=""></a></li>
+						<li><a href=""><img src="images/pizza.png" class="size" alt=""></a></li>
+						<li><a href=""><img src="images/spaget.png" class="size" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="col-md-8">
+					<h3 align="center">Welcome to our Italian Cafe</h3>
+
+					<hr>
+					<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, est magni doloribus qui dolorum quos aliquam alias minima accusamus iusto. Quod sapiente vitae inventore necessitatibus libero corrupti esse recusandae rem.</span>
+					<span>Deleniti, libero placeat quae ex facere, possimus, magni nisi sit nihil sunt dolorem. Ratione magnam dolorum libero ad voluptates placeat aliquid, pariatur, eveniet facilis officiis, sapiente reprehenderit! Totam, autem, similique?</span>
+					<span>Quos possimus est minus, accusantium a obcaecati veniam ab esse debitis quia ex consequatur asperiores corporis accusamus atque aperiam nisi tenetur doloribus expedita, sapiente iste tempora. Dolore vitae nulla incidunt!</span></p>
+					<h6 align="center"><img class="sized" src="images/cafe.jpg" alt=""></h6>
+
+
+				</div>
+				<div class="col-md-2">
+					<div align="center" class="menuButton">
+						<a id="showRight" href="#"><img class="butt" src="images/drinks.png" alt=""></a>
+					</div>
+					<ul id="menu2" class="line1">
+						<li><a href=""><img src="images/coffee.png" class="size" alt=""></a></li>
+						<li><a href=""><img src="images/drink.png" class="size" alt=""></a></li>
+						<li><a href=""><img src="images/beer.png" class="size" alt=""></a></li>
+						<li><a href=""><img src="images/wine.png" class="size" alt=""></a></li>
+						<li><a href=""><img src="images/coke.png" alt="" class="size"></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div id="carousel-example-generic" class="carousel slide padd" data-ride="carousel">
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+
+					  <div class="carousel-inner" role="listbox">
+
+					    <div class="item active oneSize">
+					      <img class="oneSize" src="images/advert.jpg" alt="...">
+					      <div class="carousel-caption">
+					      </div>
+					    </div>
+
+					    <div class="item oneSize">
+					      <img class="oneSize" src="images/advert.jpg" alt="...">
+					      <div class="carousel-caption">
+					      </div>
+					    </div> 
+
+					    <div class="item oneSize">
+					      <img class="oneSize" src="images/advert.jpg" alt="...">
+					      <div class="carousel-caption">
+					      </div>
+					    </div> 
+						  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>		
+			</div>
+
+				<div class="row colored">
+					<div class="col-md-4 padded">
+						<h4 class="footHeading">Our Contacts: </h4>
+						<ul align="center">
+							<li>8(701)736-35-55</li>
+							<li>8(727)398-23-32</li>
+							<li>8(727)234-12-24</li>
+						</ul>
+					</div>
+					<div class="col-md-4 padded">
+						<h4 class="footHeading">Address: </h4>
+						<div id="map"></div>
+					</div>
+					<div class="col-md-4 padded">
+						<h4 class="footHeading">Social networks: </h4>
+						<ul>
+							<li><a href=""><img class="circled" src="images/vk.png" alt=""></a></li>
+							<li><img class="circled" src="images/facebook.png" alt=""></li>
+							<li><img class="circled" src="images/twitter.png" alt=""></li>
+							<li><img class="circled" src="images/insta.png" alt=""></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</body>
+</html>
