@@ -1,14 +1,28 @@
 @import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
-@import url(../fonts/Aclonica regular.ttf);
-@import url(https://fonts.googleapis.com/css?family=Aladin);
-@import url(../fonts/ABeeZee regular.ttf);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 *{
 	margin: 0;
 	padding: 0;
 }
+
+@font-face{
+	font-family: opensans;
+	src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face{
+	font-family: opensans-regular;
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face{
+	font-family: opensans-semibold;
+	src: url(../fonts/OpenSans-Semibold.ttf);
+}
+
 body{
-	background-color: #34495e;
-	font-family: 'ABeeZee','Aclonica';
+	background-image: url(../images/bg.jpg);
+	font-family: Helvetica;
 	color: white;
 }
 .fix{
@@ -19,15 +33,34 @@ body{
 	display: block;
 	width: 100%;
 	z-index: 10;
-	
 }
+
+
+p span{
+	font-family: opensans-regular;
+}
+
+h3{
+	font-family: opensans-semibold;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
 .stat{
 	margin-top: 50px;
 	overflow: auto;
 	z-index: 5;
 }
 menu{
-	background-color: #2c3e50;
+	background: #B12525;
 	text-align: right;
 	display: block;
 	height: 50px;
@@ -44,8 +77,8 @@ menu li{
 	color: #f39c12;
 }
 menu li a{
-	font-size: 2.5em;
-	font-family: 'Aladin','Purlsa','Apple Garamond', 'Ubuntu';
+	font-size: 2em;
+	font-family: opensans;
 	color: white;
 	transition-property: all;
 	transition-duration: 0.5s;
@@ -63,13 +96,13 @@ menu li a:hover:not(.active){
 }
 menu li a.active{
 	text-decoration: none;
-	background-color: #555;
 	color: white; 
 	border-radius: 5px;
 }
 .icon{
-	display: inline;
-	padding-right: 47%;
+	position: absolute;
+	top: 5;
+	left: 15;
 }
 .fonting{
 	font-size: 2em;
@@ -120,6 +153,11 @@ li{
 .padd{
 	padding-bottom: 50px;
 }
+.newClass{
+	margin-top: 40px;
+	background-color: white;
+	color: black;
+}
 #menu1, #menu2{
 	display: none;
 }
@@ -131,15 +169,17 @@ li{
 .footHeading{
 	font-family: 'Aclonica';
 	font-size: 1.25em;
-	color: white;
+	color: black;
 }
 .colored{
-	background-color: #2c3e50;
+	background-color: #B12525;
+	color: black;
 }
 #map{
-	width: 300px;
+	width: 450px;
 	height: 300px;
 }
 .padded{
 	padding-top: 20px;
+	border-right: 1px solid white;
 }
