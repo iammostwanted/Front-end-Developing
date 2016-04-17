@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Gallery</title>
+		<link rel="shortcut icon" href="images/gallery.png">
+
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="css/gallery.css">
+		<link rel="stylesheet" href="fonts/Aladin regular.ttf">
+
+		<script src="jquery/dist/jquery.js"></script>
+		<script src="bootstrap/dist/js/bootstrap.js"></script>
+
+		<!-- <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+		<script type="text/javascript">
+            var map;
+
+            DG.then(function () {
+                map = DG.map('map', {
+                    center: [43.203815, 76.896679],
+                    zoom: 16
+                });
+
+                DG.marker([43.203815, 76.896679]).addTo(map).bindPopup('This is our location');
+            });
+        </script> -->
+
+		<script>
+		$(document).ready(function(){
+		    $("#showLeft").click(function(){
+		        $("#menu1").slideToggle	(1000);
+		    });
+		});
+		$(document).ready(function(){
+		    $("#showRight").click(function(){
+		        $("#menu2").slideToggle	(1000);
+		    });
+		});
+
+		$('.dropdown-toggle').dropdown();
+
+		$('#myModal').on('shown.bs.modal', function () {
+	      $('#myInput').focus()
+	    })
+		</script>
+	</head>
+	<body>
+		<div class="fix">
+			<menu>
+				<div class="icon">
+					<a href=""><span class="glyphicon glyphicon-list fonting"></span></a>	
+				</div>
+				<ul>
+					<li><a class="" href="index.html">Home page</a></li>
+					<li><a class="active" href="gallery.html">Gallery</a></li>
+					<li><a href="">Partners</a></li>
+				</ul>	
+				
+			</menu>		
+		</div>
+		<div class="container stat">
+
+			<div class="row">
+				<h1 align="center">Welcome to Gallery page</h1>
+				<hr>
+			</div>	
+
+			<div class="row">
+				<div class="col-md-3">
+					<div class="panel panel-red">
+	                    <div class="panel-heading">
+	                        <h3 align="center" class="panel-title">Picture</h3>
+	                    </div>
+	                    <div align="center" class="panel-body">
+	                        <img class="size" src="images/coke.png" alt="">
+	                    </div>
+	                </div>
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-red">
+	                    <div class="panel-heading">
+	                        <h3 align="center" class="panel-title">Picture</h3>
+	                    </div>
+	                    <div align="center" class="panel-body">
+	                        <img class="size" src="images/cafe1.jpg" alt="">
+	                    </div>
+	                </div>
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-red">
+	                    <div class="panel-heading">
+	                        <h3 align="center" class="panel-title">Picture</h3>
+	                    </div>
+	                    <div align="center" class="panel-body">
+	                        <img class="size" src="images/cafe2.jpg" alt="">
+	                    </div>
+	                </div>
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-red">
+	                    <div class="panel-heading">
+	                        <h3 align="center" class="panel-title">Picture</h3>
+	                    </div>
+	                    <div align="center" class="panel-body">
+	                        <img class="size" src="images/cafe3.jpg" alt="">
+	                    </div>
+	                </div>
+				</div>
+			</div>		
+
+			<div class="row">
+				
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -12,6 +12,19 @@
 		<script src="bootstrap/dist/js/bootstrap.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
+		<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+		<script type="text/javascript">
+            var map;
+
+            DG.then(function () {
+                map = DG.map('map', {
+                    center: [43.203815, 76.896679],
+                    zoom: 16
+                });
+
+                DG.marker([43.203815, 76.896679]).addTo(map).bindPopup('This is our location');
+            });
+        </script>
 
 		<script>
 		$(document).ready(function(){
@@ -24,16 +37,13 @@
 		        $("#menu2").slideToggle	(1000);
 		    });
 		});
-		$('.carousel').carousel()
 
-		function initMap() {
-		    var mapDiv = document.getElementById('map');
-		    var map = new google.maps.Map(mapDiv, {
-		      center: {lat: 43.15, lng: 76.55},
-		      zoom: 12
-		    });
-		  }
-	</script>
+		$('.dropdown-toggle').dropdown();
+
+		$('#myModal').on('shown.bs.modal', function () {
+	      $('#myInput').focus()
+	    })
+		</script>
 	</head>
 	<body>
 		<div class="fix">
@@ -43,122 +53,150 @@
 				</div>
 				<ul>
 					<li><a class="active" href="">Home page</a></li>
-					<li><a href="">About Us</a></li>
-					<li><a href="">Contacts</a></li>
-					<li><a href="">Gallery</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="">Partners</a></li>
 				</ul>	
 				
 			</menu>		
 		</div>
 		
-		<div class="container-fluid stat">
-			<div class="row">
-				<div class="col-md-2">
-					<div align="center" class="menuButton">
-						<a id="showLeft" href="#"><img class="butt" src="images/menu.png" alt=""></a>
-					</div>
-					<ul id="menu1" class="line">
-						<li><a href=""><img src="images/salad.png" class="size" alt=""></a></li>
-						<li><a href=""><img src="images/soup.png" class="size" alt=""></a></li>
-						<li><a href=""><img src="images/pizza.png" class="size" alt=""></a></li>
-						<li><a href=""><img src="images/spaget.png" class="size" alt=""></a></li>
-					</ul>
-				</div>
-				<div class="col-md-8 newClass card-3">
+		<div class="container stat">
+			<div class="row newClass card-3">
+				<!-- <div class="col-md-2">
+					
+				</div> -->
 					<h3 align="center">Welcome to our Italian Cafe</h3>
 
 					<hr>
-					<p>There were changes in ubuntu at 17:49</p>
-					<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, est magni doloribus qui dolorum quos aliquam alias minima accusamus iusto. Quod sapiente vitae inventore necessitatibus libero corrupti esse recusandae rem.</span>
-					<span>Deleniti, libero placeat quae ex facere, possimus, magni nisi sit nihil sunt dolorem. Ratione magnam dolorum libero ad voluptates placeat aliquid, pariatur, eveniet facilis officiis, sapiente reprehenderit! Totam, autem, similique?</span>
-					<span>Quos possimus est minus, accusantium a obcaecati veniam ab esse debitis quia ex consequatur asperiores corporis accusamus atque aperiam nisi tenetur doloribus expedita, sapiente iste tempora. Dolore vitae nulla incidunt!</span></p>
-					<h6 align="center"><img class="sized" src="images/cafe.jpg" alt=""></h6>
-
-
-				</div>
-				<div class="col-md-2">
-					<div align="center" class="menuButton">
-						<a id="showRight" href="#"><img class="butt" src="images/drinks.png" alt=""></a>
+					
+					<div class="col-md-12">
+						<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab nesciunt id illum aut alias maiores fuga vel ipsa distinctio, amet dignissimos quaerat enim accusamus, eaque unde numquam omnis iste. Fugiat?</span>
+						<span>Ab voluptatum neque iusto magni quia omnis ea, et deleniti tempore cumque delectus debitis voluptatibus doloremque minus sunt fugiat, quis ullam quo id assumenda, earum aliquid facere dolores. Illum, aut.</span>
+						<span>Nesciunt quibusdam maxime officiis id porro recusandae ab saepe reprehenderit sit, voluptatem rem quas eveniet dicta illum architecto. Assumenda itaque maxime voluptatum nihil doloremque ea ratione ex id, dignissimos placeat?</span></p>
 					</div>
-					<ul id="menu2" class="line1">
-						<li><a href=""><img src="images/coffee.png" class="size" alt=""></a></li>
-						<li><a href=""><img src="images/drink.png" class="size" alt=""></a></li>
-						<li><a href=""><img src="images/beer.png" class="size" alt=""></a></li>
-						<li><a href=""><img src="images/wine.png" class="size" alt=""></a></li>
-						<li><a href=""><img src="images/coke.png" alt="" class="size"></a></li>
-					</ul>
-				</div>
-			</div>
-
-			<hr>
-
-			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-10">
-					<div id="carousel-example-generic" class="carousel slide padd" data-ride="carousel">
-					  <ol class="carousel-indicators">
-					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					  </ol>
-
-					  <div class="carousel-inner" role="listbox">
-
-					    <div class="item active oneSize">
-					      <img class="oneSize" src="images/advert.jpg" alt="...">
-					      <div class="carousel-caption">
-					      </div>
-					    </div>
-
-					    <div class="item oneSize">
-					      <img class="oneSize" src="images/advert.jpg" alt="...">
-					      <div class="carousel-caption">
-					      </div>
-					    </div> 
-
-					    <div class="item oneSize">
-					      <img class="oneSize" src="images/advert.jpg" alt="...">
-					      <div class="carousel-caption">
-					      </div>
-					    </div> 
-						  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						    <span class="sr-only">Previous</span>
-						  </a>
-						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						    <span class="sr-only">Next</span>
-						  </a>
+					
+					<div class="col-md-3">
+						<div class="menuButton">
+							<a id="showLeft" href="#"><img class="butt" src="images/menu.png" alt=""></a>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-1"></div>		
-			</div>
-
-				<div class="row colored"> 
-					<div class="col-md-4 padded">
-						<h4 class="footHeading">Our Contacts: </h4>
-						<ul align="center">
-							<li>8(701)736-35-55</li>
-							<li>8(727)398-23-32</li>
-							<li>8(727)234-12-24</li>
+						<ul id="menu1" class="line">
+							<li><a href=""><img src="images/salad.png" class="size" alt=""></a></li>
+							<li><a href=""><img src="images/soup.png" class="size" alt=""></a></li>
+							<li><a href=""><img src="images/pizza.png" class="size" alt=""></a></li>
+							<li><a href=""><img src="images/spaget.png" class="size" alt=""></a></li>
 						</ul>
 					</div>
-					<div class="col-md-5 padded">
+					<div class="col-md-6">
+						<img class="sized" src="images/cafe.jpg" alt="">
+					</div>
+					<div class="col-md-3">
+						<div align="right" class="menuButton">
+							<a id="showRight" href="#"><img class="butt" src="images/drinks.png" alt=""></a>
+						</div>
+						<ul id="menu2" class="line1">
+							<li><a href=""><img src="images/coffee.png" class="size" alt=""></a></li>
+							<li><a href=""><img src="images/drink.png" class="size" alt=""></a></li>
+							<li><a href=""><img src="images/beer.png" class="size" alt=""></a></li>
+							<li><a href=""><img src="images/wine.png" class="size" alt=""></a></li>
+							<li><a href=""><img src="images/coke.png" alt="" class="size"></a></li>
+						</ul>
+					</div>
+					
+
+					<div class="col-md-4">
+		
+						<a href="" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+						Deliver Food  
+						<img class="circled" src="images/deliver.png" alt="">
+						</a>
+										
+							<!-- Modal -->
+				            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				              <div class="modal-dialog" role="document">
+				                <div class="modal-content newModal">
+				                  <div class="modal-header">
+				                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				                    <h4 align="center" class="modal-title colorHead" id="myModalLabel">Delivering food</h4>
+				                  </div>
+				                  <div class="modal-body">
+				                    <form class="form-horizontal" method="post" id="the-form">
+				                            <div class="form-group">
+				                                <label for="inputName" class="col-sm-4 control-label colorHead">Name</label>
+				                                <div class="col-sm-8">
+				                                    <input type="text" class="form-control" placeholder="Your name" name="name"> 
+				                                </div>
+				                            </div>
+
+				                          <div class="form-group">
+				                            <label for="inputEmail3" class="col-sm-4 control-label colorHead">Surname</label>
+				                            <div class="col-sm-8">
+				                              <input class="form-control" id="inputEmail3" placeholder="Surname" name="surname">
+				                            </div>
+				                          </div>
+
+				                          <div class="form-group">
+				                            <label for="inputPassword3" class="col-sm-4 control-label colorHead">Phone-number</label>
+				                            <div class="col-sm-8">
+				                              <input type="text" class="form-control" id="inputMobile" placeholder="Phone-number" name="phone">
+				                            </div>
+				                          </div>
+				                            <hr>    
+				                          <div class="form-group">
+				                            <div class="col-sm-offset-1 col-sm-8">
+				                                    
+				                              <button class="btn btn-success">
+				                              	<span class="glyphicon glyphicon-earphone"></span>
+												Call
+				                              </button>
+				                            </div>
+				                          </div>
+				                        </form>
+				                  </div>
+				                </div>
+				              </div>
+
+				            </div>
+					</div>
+					<div class="col-md-4">
+						<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsa soluta, eaque ad vitae et tenetur, cum repudiandae quam libero! Fugiat, dignissimos tempore vitae doloremque nisi numquam quidem laborum ullam.</span><span>Nulla ut esse numquam, quis inventore facere! Ab dignissimos esse sint inventore quisquam consectetur veniam ullam vel, temporibus voluptas, mollitia perspiciatis numquam explicabo, consequuntur dolor rem sit iure necessitatibus nobis.</span></p>
+					</div>
+					<div class="col-md-4">
+						<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor dolorem nobis fuga amet corrupti vitae culpa, laudantium et, voluptates perspiciatis, fugit aliquam porro laboriosam est cupiditate odit! Magni, unde.</span><span>Voluptatibus quis aliquid odio repudiandae sint quae accusamus cum magnam fugit minus. Eum rem nihil, facilis libero laborum quod non autem repellat quasi quis corrupti, ullam doloremque eius quae deserunt?</span></p>
+					</div>
+
+					
+					<div class="col-md-12">
+						<hr>
+					</div>
+
+					<div class="col-md-3">
+						<h4 class="footHeading">Our Contacts: </h4>
+						<ul class="Contacts">
+							<li><span class="glyphicon glyphicon-home spanPad"></span>Almaty city, Zharokov street 159</li>
+							<li><span class="glyphicon glyphicon-phone-alt spanPad"></span>8(727)398-23-32</li>
+							<li><span class="glyphicon glyphicon-phone spanPad"></span>8(701)736-35-55</li>
+							<li><span class="glyphicon glyphicon-phone spanPad"></span>8(707)234-12-24</li>
+							<li><span class="glyphicon glyphicon-envelope spanPad"></span>2909Serik@gmail.com</li>
+						</ul>
+					</div>
+
+					<div class="col-md-7">
 						<h4 class="footHeading">Address: </h4>
 						<div id="map"></div>
 					</div>
-					<div class="col-md-3 padded">
+					<div class="col-md-2">
 						<h4 class="footHeading">Social networks: </h4>
 						<ul>
-							<li><a href=""><img class="circled" src="images/vk.png" alt=""></a></li>
-							<li><img class="circled" src="images/facebook.png" alt=""></li>
-							<li><img class="circled" src="images/twitter.png" alt=""></li>
-							<li><img class="circled" src="images/insta.png" alt=""></li>
+							<li><a class="styled" href="https://vk.com/club.lacucina"><img class="circled" 					src="images/vk.png" alt="">   VK</a></li>
+							<li><a class="styled" href="https://www.facebook.com/Citt%C3%A0-Italian-Restraunt-385251598209784/?fref=ts"><img class="circled" src="images/facebook.png" alt="">   Facebook  </a></li>
+							<li><a class="styled" href="https://twitter.com/CarmelosItalian"><img class="circled" src="images/twitter.png" alt="">   Twitter </a></li>
+							<li><a class="styled" href="https://www.instagram.com/explore/locations/1023034678/"><img class="circled" src="images/insta.png" alt="">   Instagram </a></li>
 						</ul>
 					</div>
-				</div>
+
+				<!-- <div class="col-md-2">	
+				</div> -->
+			</div>
 		</div>
 	</body>
 </html>
